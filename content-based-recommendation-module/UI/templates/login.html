@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  rel="stylesheet">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 <script type="text/javascript"  src="{{url_for('static',filename= 'login.js')}}"></script>
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="navbar-brand" href="#">Recommendation System</a>
+</nav>
+   <form class="box" action="{{url_for('dashboard1')}}" method="POST">
+   	<h1>Login</h1>
+   
+   	 <input type="text" name="username" placeholder="username" id="name" required><br>
+   	 <input type="password" name="password" placeholder="password" id="pass" required><br>
+   	 <p hidden="true" id="p">User Not Found</p>
+   	 <input type="submit" name="Login" onclick="return loginauth()" value="Login">
+
+   	 <p style="font-size: 12px"><a href="{{url_for('register')}}">New Register?</a></p>
+   </form>
+
+<style type="text/css">
+   body{
+   	margin: 0;
+   	padding: 0;
+   	font-family: sans-serif;
+   	background: #34495e;
+   }
+   #p{
+   	color: white;
+   }
+   .box{
+   	width: 450px;
+   	padding: 14px;
+   	position: absolute;
+   	top: 55%;
+   	left: 50%;
+   	transform: translate(-50%,-50%);
+   	background: #191919;
+   	text-align: center;
+   }
+   .box h1{
+   	color: white;
+   	text-transform: uppercase;
+   	font-weight: 500;
+   }
+   .box input[type="text"],.box input[type="password"]{
+   	border: 0;
+   	background: none;
+   	display: block;
+   	margin: 20px auto;
+   	text-align: center;
+   	border: 2px solid #3498db;
+   	padding: 8px 10px;
+   	width: 200px;
+   	outline: none;
+   	color: white;
+   	border-radius: 24px;
+   }
+   .box input[type="text"]:focus,.box input[type="password"]:focus{
+         width: 280px;
+         border-color: #2ecc71;
+   }
+   .box input[type="submit"]{
+   	border: 0;
+   	background: none;
+   	display: block;
+   	margin: 20px auto;
+   	text-align: center;
+   	border: 2px solid #3498db;
+   	padding: 14px 10px;
+   	outline: none;
+   	color: white;
+   	border-radius: 24px;
+   	transition: 0.25s;
+   	cursor: pointer;
+   }
+   box input[type="submit"]:hover{
+   	background: #2ecc71;
+   }
+</style>	
+</body>
+</html>
