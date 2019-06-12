@@ -85,4 +85,4 @@ Congratulations, you have successfully set up scikit-learn!
           >>python3 Recommend-books1.py
  ----------------------------------------------------------------------------------------------         
    
-        
+ Team members - [Sneha V](https://github.com/snehavishwanatha), [Sahil MH](https://github.com/mohedsahil), [Shubhang P](https://github.com/ShubhangPK)
